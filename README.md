@@ -1,8 +1,10 @@
-[README.md](https://github.com/user-attachments/files/29916932/README.md)
 # Transcendance Lab — Landing page
 
-Ce dossier contient un seul fichier : `index.html`.
-C'est une page autonome (HTML + CSS + JS dans le même fichier), aucune installation n'est nécessaire.
+Ce dossier contient tout ce qu'il faut pour ton site :
+- `index.html` : la page (HTML + CSS + JS dans le même fichier)
+- `videos/` : les deux vidéos témoignages (compressées pour le web) et leurs images d'aperçu
+
+Aucune installation n'est nécessaire, il suffit de mettre en ligne le dossier tel quel.
 
 ## Héberger sur GitHub Pages (gratuit)
 
@@ -19,8 +21,10 @@ C'est une page autonome (HTML + CSS + JS dans le même fichier), aucune installa
 
 Option la plus simple, sans ligne de commande :
 - Sur la page de ton nouveau dépôt, clique sur "uploading an existing file" (ou "Add file" > "Upload files")
-- Glisse le fichier `index.html` (et `README.md` si tu veux)
+- Glisse le fichier `index.html`, le `README.md`, et le dossier `videos` en entier (avec les 2 vidéos et les 2 images à l'intérieur)
 - Clique sur "Commit changes"
+
+Le dossier `videos` pèse environ 37 Mo au total, ce qui passe très bien sur GitHub (la limite est de 100 Mo par fichier). L'envoi peut juste prendre une ou deux minutes selon ta connexion.
 
 **4. Activer GitHub Pages**
 - Dans ton dépôt, va dans "Settings" (en haut)

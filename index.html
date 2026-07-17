@@ -19,7 +19,7 @@
     --stone-dim:#8A7F9C;
     --serif:'Cormorant Garamond', serif;
     --sans:'Jost', sans-serif;
-    --fs-hero: clamp(2rem, 4.6vw, 3.2rem);
+    --fs-hero: clamp(2.3rem, 5.4vw, 3.8rem);
     --fs-h2: clamp(1.5rem, 2.8vw, 2.05rem);
     --fs-body: 1.05rem;
   }
@@ -209,26 +209,44 @@
     margin-bottom:0.7rem !important;
   }
 
-  /* ---------- testimonial placeholder ---------- */
-  .testimonial-slot{
-    max-width:640px; margin:0 auto;
-    border:1px solid var(--hairline-soft);
-    padding:2rem 1.8rem;
+  /* ---------- testimonials ---------- */
+  .testimonial-note{
+    max-width:640px; margin:0 auto 2.2rem;
     text-align:center;
   }
-  .testimonial-slot::before{
-    content:"";
-    display:block;
-    width:34px; height:1px;
-    background:var(--gold);
-    margin:0 auto 1rem;
-  }
-  .testimonial-slot p{
+  .testimonial-note p{
     margin:0;
-    font-size:0.88rem;
-    letter-spacing:0.04em;
+    font-size:0.85rem;
+    letter-spacing:0.03em;
     color:var(--stone-dim);
     font-style:italic;
+  }
+  .testimonials{
+    display:flex;
+    flex-wrap:wrap;
+    gap:2.8rem;
+    justify-content:center;
+    max-width:780px;
+    margin:0 auto;
+  }
+  .testimonial-item{
+    width:100%;
+    max-width:320px;
+  }
+  .testimonial-item .ttitle{
+    color:var(--gold-bright);
+    font-weight:600;
+    font-size:1rem;
+    line-height:1.5;
+    margin:0 0 0.9rem 0;
+    text-align:left;
+  }
+  .testimonial-item video{
+    width:100%;
+    display:block;
+    background:#000;
+    border:1px solid var(--hairline-soft);
+    border-radius:2px;
   }
 
   footer{
@@ -398,11 +416,24 @@
   </div>
 </section>
 
-<!-- ============ TESTIMONIAL PLACEHOLDER ============ -->
+<!-- ============ TEMOIGNAGES ============ -->
 <section class="section">
   <div class="container">
-    <div class="testimonial-slot">
-      <p>Témoignages et retours clients en cours de mise en ligne.</p>
+    <div class="testimonials">
+      <div class="testimonial-item">
+        <p class="ttitle">De 0-1000€/mois dans une activité qui ne lui correspondait plus, à 7000€/mois dans une activité beaucoup plus alignée.</p>
+        <video controls preload="metadata" playsinline poster="videos/poster-tom-soa.jpg">
+          <source src="videos/temoignage-tom-soa.mp4" type="video/mp4">
+          Ton navigateur ne prend pas en charge la lecture vidéo.
+        </video>
+      </div>
+      <div class="testimonial-item">
+        <p class="ttitle">Bloqué entre 20 et 30k/mois depuis des mois, il explose ses revenus et débloque une énergie illimitée pour son business en dissolvant une mémoire d'enfance stockée dans son subconscient.</p>
+        <video controls preload="metadata" playsinline poster="videos/poster-mino.jpg">
+          <source src="videos/temoignage-mino.mp4" type="video/mp4">
+          Ton navigateur ne prend pas en charge la lecture vidéo.
+        </video>
+      </div>
     </div>
   </div>
 </section>
@@ -535,7 +566,7 @@
 
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var targets = document.querySelectorAll('.section h2, .section .prose, .section .simple-list, .testimonial-slot');
+    var targets = document.querySelectorAll('.section h2, .section .prose, .section .simple-list, .testimonials');
     targets.forEach(function (el) { el.classList.add('reveal'); });
 
     var io = new IntersectionObserver(function (entries) {
