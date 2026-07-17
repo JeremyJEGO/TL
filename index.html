@@ -233,6 +233,14 @@
     width:100%;
     max-width:320px;
   }
+  .testimonial-item .tphoto{
+    width:84px; height:84px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1px solid var(--hairline-soft);
+    display:block;
+    margin-bottom:0.9rem;
+  }
   .testimonial-item .tname{
     color:var(--ivory);
     font-family:var(--serif);
@@ -248,6 +256,10 @@
     line-height:1.5;
     margin:0 0 0.9rem 0;
     text-align:left;
+  }
+  .testimonial-item audio{
+    width:100%;
+    display:block;
   }
   .testimonial-item video{
     width:100%;
@@ -445,6 +457,14 @@
           <source src="videos/temoignage-mino.mp4" type="video/mp4">
           Ton navigateur ne prend pas en charge la lecture vidéo.
         </video>
+      </div>
+      <div class="testimonial-item">
+        <img class="tphoto" src="videos/mathilde-photo.jpg" alt="Mathilde">
+        <p class="tname">Mathilde</p>
+        <p class="ttitle">D'une activité floue et de compétences dévalorisées, à une offre claire, structurée et portée avec confiance.</p>
+        <audio controls preload="metadata" src="videos/temoignage-mathilde.mp3">
+          Ton navigateur ne prend pas en charge la lecture audio.
+        </audio>
       </div>
     </div>
   </div>
